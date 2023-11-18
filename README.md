@@ -4,10 +4,9 @@ Prestige is a digital comic reading application for Windows desktops and devices
 
 ## Status
 
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=prestige)](https://sonarcloud.io/dashboard?id=prestige)\
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=comixed_prestige)](https://sonarcloud.io/dashboard?id=comixed_prestige)\
 [![Latest Release](https://github.com/comixed/comixed/actions/workflows/publish-release.yml/badge.svg)](https://actions-badge.atrox.dev/comixed/prestige/goto?ref=master)\
 [![Docker Release](https://github.com/comixed/comixed/actions/workflows/publish-to-docker-hub.yml/badge.svg)](https://actions-badge.atrox.dev/comixed/prestige/goto?ref=master)
-‰
 
 
 # Project Roadmap And Vision Statement
@@ -16,7 +15,7 @@ The goals of this project are to provide a platform where users can read
 digital comic books hosted on any [ComiXed](http://www.comixedproject.org)
 server instance to which it is connected.
 
-To achieve these goalds, the project will:
+To achieve these goals, the project will:
 
  * run on any Windows desktop or tablet device,
  * maintain a list of servers for retrieving comic books,

@@ -1,4 +1,4 @@
-name: SonarCloud analysis
+name: SonarCloud
 on:
   push:
     branches:
@@ -15,10 +15,9 @@ jobs:
         with:
           java-version: 17
           distribution: 'zulu'
-
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 0 
 
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
@@ -44,10 +43,10 @@ jobs:
 
       - name: Build and analyze
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"comixed_prestige" /o:"comixed" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          <insert_your_build_command>
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner --version 4.8.0
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
