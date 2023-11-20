@@ -16,15 +16,29 @@
  * along with this program. If not, see <http://www.gnu.org/licenses>
  */
 
+using System.Collections.ObjectModel;
 using Windows.UI.Xaml.Controls;
 
 namespace prestige
 {
     public sealed partial class MainPage : Page
     {
+        public ObservableCollection<OPDSServerEntry> ServerEntries { get; }
+         = new ObservableCollection<OPDSServerEntry>();
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            this.ServerEntries.Add(new OPDSServerEntry("My First Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+            this.ServerEntries.Add(new OPDSServerEntry("My Second Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+            this.ServerEntries.Add(new OPDSServerEntry("My Third Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+            this.ServerEntries.Add(new OPDSServerEntry("My Fourth Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+            this.ServerEntries.Add(new OPDSServerEntry("My Fifth Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+            this.ServerEntries.Add(new OPDSServerEntry("My Sixth Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+            this.ServerEntries.Add(new OPDSServerEntry("My Seventh Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+            this.ServerEntries.Add(new OPDSServerEntry("My Eighth Server", "https://localhost:7171/opds", "comixedreader@localhost", "comixedreader"));
+
         }
     }
 }
