@@ -48,5 +48,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"comixed_prestige" /o:"comixed" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner --version 4.8.0
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
